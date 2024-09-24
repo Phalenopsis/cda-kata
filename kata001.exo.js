@@ -35,9 +35,6 @@ var recentMovies = [
     }
 ];
 function filterByTitle(movies, searchedTitle) {
-    return movies.filter(function (movie) { return movie.title.toUpperCase() == searchedTitle.toUpperCase(); });
+    return movies.filter(function (movie) { return movie.title.toUpperCase().includes(searchedTitle.toUpperCase()); });
 }
-console.log(filterByTitle(recentMovies, "Cybernetic"));
-console.log(filterByTitle(recentMovies, "Cybernetics"));
-console.log(filterByTitle(recentMovies, "CYBERNETIC"));
-console.log(filterByTitle(recentMovies, ""));
+console.log(filterByTitle(recentMovies, "the"));
