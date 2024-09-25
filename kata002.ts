@@ -22,7 +22,7 @@ const numbers2 = [12, 21, 67, 36, 49, 51];
 // your code here
 
 function maxNumber(numbers: number[]): number {
-    return numbers.reduce((max: number, current: number) => current > max ? current : max, 0);
+    return numbers.reduce((max: number, current: number) => current > max ? current : max, Number.NEGATIVE_INFINITY);
 }
 
 console.log(maxNumber(numbers));

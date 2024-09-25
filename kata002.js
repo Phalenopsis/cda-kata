@@ -13,11 +13,7 @@ console.log(sumOfEvenNumbers(numbers));
 var numbers2 = [12, 21, 67, 36, 49, 51];
 // your code here
 function maxNumber(numbers) {
-    return numbers.reduce(function (max, current) { return current > max ? current : max; }, 0);
-}
-function maxNumberByBit(numbers) {
-    return numbers.reduce(function (max, current) { return current ^ max; }, 0);
+    return numbers.reduce(function (max, current) { return current > max ? current : max; }, Number.NEGATIVE_INFINITY);
 }
 console.log(maxNumber(numbers));
 console.log(maxNumber(numbers2));
-console.log(maxNumberByBit(numbers2));
