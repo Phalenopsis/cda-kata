@@ -17,7 +17,7 @@ function tsResetPicker(students: Student[]): Student[] {
     return students;
 }
 
-function tsRetRandomStudent(freeStudents: Student[]): Student {
+function tsGetRandomStudent(freeStudents: Student[]): Student {
     const nbStudents = freeStudents.length;
     const n = Math.floor(Math.random() * nbStudents);
     const studentPicked = freeStudents[n];
@@ -32,7 +32,7 @@ function tsPickReviewer(students: Student[]): Student {
     if (nbStudents === 0) {
         freeStudents = tsResetPicker(students);
     }
-    return tsRetRandomStudent(freeStudents);
+    return tsGetRandomStudent(freeStudents);
 }
 
 console.log(tsPickReviewer(tsEleves).name);
