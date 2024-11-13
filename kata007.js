@@ -12,7 +12,7 @@ var products = [
     { id: 5, name: "Montre Connectée", category: "Électronique", price: 249.99, rating: 4.4 },
 ];
 function sortByRating(products) {
-    return products.sort(function (productA, productB) { return productB.rating - productA.rating; });
+    return products.toSorted(function (productA, productB) { return productB.rating - productA.rating; });
 }
 function filterByCategory(products, category) {
     return products.filter(function (product) { return product.category === category; });

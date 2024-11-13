@@ -23,7 +23,7 @@ const products: Product[] = [
 ];
 
 function sortByRating(products: Product[]): Product[] {
-    return products.sort((productA: Product, productB: Product) => productB.rating - productA.rating);
+    return products.toSorted((productA: Product, productB: Product) => productB.rating - productA.rating);
 }
 
 function filterByCategory(products: Product[], category: CategoryName): Product[] {
